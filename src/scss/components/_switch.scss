@@ -1,0 +1,79 @@
+.custom-switch {
+  width: 5.9rem; height: 1.5625rem;
+  padding: 0;
+  background-color: $gray-200;
+  border-radius: $custom-switch-indicator-border-radius;
+  // @media(max-width: 1199px) {
+  //   width: 5rem;
+  // }
+  @media(max-width: 799px) {
+    height: 30px;
+  }
+  .custom-control-label {
+    padding: .25rem .875rem;
+    font-size: 0.875rem;
+    color: $white;
+    text-align: right;
+    transition: color .15s ease-in-out;
+    // @media(max-width: 1199px) {
+    //   padding: .25rem 0.625rem;
+    // }
+    @media(max-width: 799px) {
+      padding: 6px .875rem;
+    }
+    &:after {
+      content: '';
+      top: 0; left: 0;
+      width: 3.2025rem;
+      color: $white;
+      background-color: $blue-base;
+      // @media(max-width: 1199px) {
+      //   width: 2.6875rem;
+      // }
+      @media(max-width: 799px) {
+        height: 30px;
+      }
+    }
+    &:before {
+      content: 'Eng';
+      top: 0; left: 0;
+      z-index: 2;
+      height: 1.5625rem;
+      padding: .25rem .625rem;
+      color: $blue-base;
+      border: none;
+      background-color: transparent;
+      transition: color .15s ease-in-out;
+      // @media(max-width: 1199px) {
+      //   width: 5rem;
+      //   padding: .25rem .5rem;
+      // }
+      @media(max-width: 799px) {
+        padding: 6px .625rem;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .custom-control-input {
+    &:checked ~ .custom-control-label {
+      color: $blue-base;
+      &:after {
+        color: $white;
+        background-color: $blue-base;
+        transform: translateX(2.6925rem);
+      }
+      &:before {
+        background-color: transparent;
+        outline: none;
+      }
+    }
+    &:focus~.custom-control-label {
+      &:before {
+        box-shadow: none;
+      }
+    }
+  }
+}

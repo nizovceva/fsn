@@ -1,0 +1,18 @@
+.breadcrumb {
+	margin-top: 22px;
+	svg {
+		fill: transparent;
+		margin-right: 10px;
+	}
+	&-item {
+		align-items: center;
+		a {
+			display: flex;
+			align-items: center;
+			color: $blue-base;
+			opacity: .8;
+			text-decoration: none;
+			&:hover, &:focus, &:active { opacity: 1; }
+		}
+	}
+}
